@@ -1,0 +1,12 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:sandybrown;
+  flex-direction: column;
+  background-image: url("/images/arches.png");
+  background-color: #d7de00;
+
+}

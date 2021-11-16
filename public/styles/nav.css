@@ -16,10 +16,11 @@ nav{
 
  }
 
- nav div {
+nav, div {
   display: flex;
   justify-content: center;
   align-items: center;
+  
  }
 
  nav i {
