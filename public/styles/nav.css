@@ -1,20 +1,29 @@
 nav{
-  
-
   height: 120;
   width: 100%;
   background-color: #4056A1;
   padding: 1.5em;
   font-size: 24px;
+  color:#FFFFFF;
   
 }
  nav, span {
-  color:#FFFFFF;
+  display: flex;
   font-family: 'Bungee', cursive;
   display:flex;
   justify-content: space-between;
   align-items: center;
-  
-
 
  }
+
+ nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ nav i {
+   color: red;
+ }
+
+ 
