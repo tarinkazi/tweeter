@@ -1,30 +1,27 @@
-nav{
-  height: 120;
+  nav {
+  height: 120px;
   width: 100%;
   background-color: #4056A1;
+  color: #FFFFFF;
   padding: 1.5em;
-  font-size: 24px;
-  color:#FFFFFF;
-  
-}
- nav, span {
+
   display: flex;
-  font-family: 'Bungee', cursive;
-  display:flex;
   justify-content: space-between;
-  align-items: center;
+}
 
- }
-
-nav, div {
+nav div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  
- }
 
- nav i {
-   color: red;
- }
+}
+
+nav span {
+  font-size: 36px;
+  font-family: 'Bungee', cursive;
+}
 
  
+i {
+  color: red;
+}
