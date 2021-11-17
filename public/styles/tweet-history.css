@@ -5,11 +5,17 @@
   margin-top: .5em;
 
 }
+.name-left{
+align-self: flex-start;
+}
 
 .tweet {
-  width: 75%;
+  height: 600px;
+  /* width: max-content; */
+  width: 100%;
+  
   margin: 1em;
-  border: 5px solid  #545149; 
+  border: 2px solid  #545149; 
 }
 
 .tweet:hover{
@@ -19,20 +25,28 @@
 .th-header {
   display: flex; 
   margin: 1em;
-  width: 90%
+  width: 95%;
+  background-color: white;
+  
 }
 .th-header h3 {
   font-weight: 300;
+  align-self: flex-start;
 }
 
 .th-header img {
   max-height: 75px;
   max-width: 75px; 
+  align-self: flex-start;
+
+}
+.userID {
+  align-self: flex-end;
 }
 
 .display-tweet {
   margin: 1em; 
-  border-style: hidden;
+  border-style: hidden; 
   border-bottom: 5px solid #545149;
   font-weight: 300;
   line-height: 1;
@@ -48,4 +62,12 @@
 .icons {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  color: blue;
+}
+
+.fa, .fas:hover {
+  font-weight: 900;
+  color:burlywood;
+
 }
