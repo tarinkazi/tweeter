@@ -36,5 +36,9 @@ button {
 }
 
 .counter {
-	margin-left: 89%;
+	margin-left: 90%;
+}
+
+.red {
+	color: red;
 }
