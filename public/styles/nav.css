@@ -4,7 +4,8 @@
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 1.5em;
-
+    position: fixed;
+    top:0;
   display: flex;
   justify-content: space-between;
 }
@@ -21,6 +22,16 @@ nav span {
   font-family: 'Bungee', cursive;
 }
 
+h2 {
+  margin-top: 0px;;
+  padding-bottom: 35px;
+}
+
+.navimg {
+  height: 280px;
+  padding-top: 20px;
+  margin-top: 85px;
+}
  
 i {
   color: red;

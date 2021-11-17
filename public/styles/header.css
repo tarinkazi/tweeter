@@ -8,5 +8,6 @@ header {
   flex-direction: column;
   background-image: url("/images/arches.png");
   background-color: #d7de00;
-
+margin-top: 65px;
+margin-bottom: 35px;
 }
