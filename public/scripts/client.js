@@ -53,15 +53,15 @@ const escape = function (str) {
 function renderTweets(tweets) {
   //renderTweets() = ;
   $('#tweet-history').empty();
-  if(tweets === "") {
-    alert("Please input some data");
-  } else {
+  // if(tweets === "") {
+  //   alert("Please input some data");
+ // } else {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       //$('#tweet-history').append($tweet);
 
      $('#tweet-history').prepend($tweet);
-    }
+    //}
   }
  
 }
@@ -74,10 +74,10 @@ const createTweetElement = function(data) {
   <header class="th-header">
    <div class='name-left'>
     <img src="${user.avatars}">
-    <h3>${escape(user.name)}</h3>
+    <h3>${user.name}</h3>
    </div>
    <div class='userID'>
-     <p>${escape(user.handle)}</p>
+     <p>${user.handle}</p>
    </div>
 </header> 
 <div class="display-tweet">
@@ -87,7 +87,7 @@ const createTweetElement = function(data) {
 </div>
 
 <footer>
-<span class="time-passed">${escape(timeago.format(created_at))}</span>
+<span class="time-passed">${timeago.format(created_at)}</span>
 <div class='icons'>
   <i class="fas fa-flag"></i>
   <i class="fas fa-retweet"></i>
@@ -115,20 +115,21 @@ $(document).ready(function () {
     evt.preventDefault();
   
        //console.log(evt.target.tweet.value)
-      const $val = $(this).serialize();
+      const $data = $(this).serialize();
+      const $val = $('#tweet-text').val();
       if ($val.length > 140) {
         return $(alert("Exceeds the limit"));
       } 
       console.log("======>",$val);
-      // if (!$val) {
-      //  return $(alert("Enter some data"));
-      // }
+      if ($val.length === 0) {
+       return $(alert("Enter some data"));
+      }
       $.ajax({
 
 
         type: "POST",
         url: "/tweets",
-        data: $val
+        data: $data
       }).then((res) => {
         loadTweets();
       })
