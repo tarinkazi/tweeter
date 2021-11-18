@@ -99,7 +99,11 @@ const createTweetElement = function(data) {
 
 }
 
+
 $(document).ready(function () {
+  $(".error-alert1").hide();
+  $(".error-alert2").hide();
+
   function loadTweets() {
     $.ajax({
       type: "GET",
@@ -113,16 +117,21 @@ $(document).ready(function () {
   loadTweets();
   $('#post_tweet').on('submit', function (evt) {
     evt.preventDefault();
+
+    $(".error-alert1").hide();
+    $(".error-alert2").hide();
   
        //console.log(evt.target.tweet.value)
       const $data = $(this).serialize();
       const $val = $('#tweet-text').val();
       if ($val.length > 140) {
-        return $(alert("Exceeds the limit"));
+       return $(".error-alert2").slideDown();
+        //return  $(".error-alert2").hide();
       } 
       console.log("======>",$val);
       if ($val.length === 0) {
-       return $(alert("Enter some data"));
+        return $(".error-alert1").slideDown();
+         //return $(".error-alert1").hide();
       }
       $.ajax({
 
