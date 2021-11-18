@@ -22,18 +22,33 @@ const tweetData = {
 
 
 const createTweetElement = function(data) {
-  console.log("DATA IS INSIDE");
-    console.log(data)
-    const item = `
-    <div class="item">
-        <img src="${data.user.avatars}" />
-        <h2>${data.content}</h2>
-        <h4>${data.created_at}</h4>
-    </div>`
+  const {user, content, created_at} = tweetData;
+  const tweetElementHTML = $(`<article class="tweet">
+  <header class="th-header">
+   <div class='name-left'>
+    <img src="${user.avatars}">
+    <h3>${user.name}</h3>
+   </div>
+   <div class='userID'>
+     <p>${user.handle}</p>
+   </div>
+</header> 
+<div class="display-tweet">
+<p>
+  ${content.text}
+</p>
+</div>
 
-  const $tweet = $(`<article class="tweet">Hello world</article>`);
- // console.log($tweet);
- return item;
+<footer>
+<span class="time-passed">${created_at}</span>
+<div class='icons'>
+  <i class="fas fa-flag"></i>
+  <i class="fas fa-retweet"></i>
+  <i class="fas fa-heart"></i>
+</div>
+</footer>
+</article>`)
+  return tweetElementHTML;
 
 }
 
