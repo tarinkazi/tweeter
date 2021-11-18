@@ -9,18 +9,19 @@
 
     <!--font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com"   crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"   crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 
-  <script src="https://kit.fontawesome.com/85884b2c45.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/85884b2c45.js" crossorigin="anonymous"></script>
  
 
- <!--font -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!--font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
- 
+    <!--Timeago-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -34,12 +35,12 @@
     
     
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- External JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+      <!-- App JS -->
+      <script type="text/javascript" src="/scripts/client.js"></script>
+      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -65,7 +66,7 @@
     <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
+      <form action="/tweets" method="POST" id="post_tweet">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div>
@@ -75,8 +76,8 @@
       </form>
     </section>
 
-    <section class="tweet-history">
-      <article class="tweet">
+    <section id="tweet-history">
+      <!-- <article class="tweet">
         <header class="th-header">
          <div class='name-left'>
           <img src="/images/profile-hex.png">
@@ -123,7 +124,7 @@
       <i class="fas fa-heart"></i>
     </div>
   </footer>
-</article>
+</article> -->
 
     </section>
 
