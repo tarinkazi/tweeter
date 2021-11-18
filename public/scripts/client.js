@@ -44,7 +44,7 @@ const tweetData = {
 
 function renderTweets(tweets) {
   for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweets);
+    const $tweet = createTweetElement(tweet);
     $('#tweet-history').append($tweet);
   }
 }
@@ -52,7 +52,7 @@ function renderTweets(tweets) {
 
 
 const createTweetElement = function(data) {
-  const {user, content, created_at} = tweetData;
+  const {user, content, created_at} = data;
   const tweetElementHTML = $(`<article class="tweet">
   <header class="th-header">
    <div class='name-left'>
@@ -82,12 +82,35 @@ const createTweetElement = function(data) {
 
 }
 
-// const $tweet = createTweetElement(tweetData);
-// console.log($tweet); // to see what it looks like
-// $('#tweets-container').append($tweet); 
+$(document).ready(function () {
+  function loadTweets() {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      dataType: "json"
+    }).then((res) => {
+      renderTweets(res);
+      // console.log("response--",res)
+    })
+  };
+  loadTweets();
+  $('#post_tweet').on('submit', function (evt) {
+    evt.preventDefault();
+  
+      // console.log(evt.target.tweet.value)
+      const $val = $(this).serialize();
+      $.ajax({
+        type: "POST",
+        url: "/tweets",
+        data: $val
+      }).then((res) => {
+        loadTweets()
+      })
+    
+  })
 
-$(document).ready(function() {
-  renderTweets(data);
+
 
 
 });
+ 
