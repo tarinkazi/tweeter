@@ -41,6 +41,14 @@
 //   "created_at": 1461116232227
 // }
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+// const safeHTML = `<p>${escape(textFromUser)}</p>`;
+
+
 
 function renderTweets(tweets) {
   //renderTweets() = ;
@@ -66,20 +74,20 @@ const createTweetElement = function(data) {
   <header class="th-header">
    <div class='name-left'>
     <img src="${user.avatars}">
-    <h3>${user.name}</h3>
+    <h3>${escape(user.name)}</h3>
    </div>
    <div class='userID'>
-     <p>${user.handle}</p>
+     <p>${escape(user.handle)}</p>
    </div>
 </header> 
 <div class="display-tweet">
 <p>
-  ${content.text}
+  ${escape(content.text)}
 </p>
 </div>
 
 <footer>
-<span class="time-passed">${timeago.format(created_at)}</span>
+<span class="time-passed">${escape(timeago.format(created_at))}</span>
 <div class='icons'>
   <i class="fas fa-flag"></i>
   <i class="fas fa-retweet"></i>
