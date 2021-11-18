@@ -43,10 +43,15 @@
 
 
 function renderTweets(tweets) {
-  for (let tweet of tweets) {
-    const $tweet = createTweetElement(tweet);
-    $('#tweet-history').append($tweet);
+  if(tweets === "") {
+    alert("Please input some data");
+  } else {
+    for (let tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweet-history').append($tweet);
+    }
   }
+ 
 }
 // Test / driver code (temporary)
 
@@ -97,8 +102,15 @@ $(document).ready(function () {
   $('#post_tweet').on('submit', function (evt) {
     evt.preventDefault();
   
-      // console.log(evt.target.tweet.value)
+       console.log(evt.target.tweet.value)
       const $val = $(this).serialize();
+      if ($val.length > 140) {
+        return $(alert("Exceeds the limit"));
+      } 
+      console.log("======>",$val);
+      if (!$val) {
+       return $(alert("Enter some data"));
+      }
       $.ajax({
         type: "POST",
         url: "/tweets",
