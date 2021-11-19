@@ -8,6 +8,24 @@ header {
   flex-direction: column;
   background-image: url("/images/arches.png");
   background-color: #d7de00;
-margin-top: 65px;
-margin-bottom: 35px;
+  margin-top: 105px;
+  margin-bottom: 35px;
+}
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  header{
+  width: 100%;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  header{
+  width: 35%;
+  float: left;
+  /* padding-top: 10px; */
+  margin-top: 150px;
+  }
 }
