@@ -60,11 +60,12 @@ p.error {
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
 	.new-tweet {
+		WIDTH: 62%;
+    FLOAT: RIGHT;
+		left: 80px;
+		margin-left: 445px;
+		
+}
+
 	
-	width: 55%;
-	float: right;
-	align-self: flex-end;
-	padding-bottom: 0px;
-	margin-top: 0px;
-	}
 }

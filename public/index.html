@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com"   crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-
     <script src="https://kit.fontawesome.com/85884b2c45.js" crossorigin="anonymous"></script>
  
 
@@ -26,74 +25,65 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
     <link rel="stylesheet" href="/styles/tweet-history.css" type="text/css" />
-    
-    
-    
 
-      <!-- External JS -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-      <!-- App JS -->
-      <script type="text/javascript" src="/scripts/client.js"></script>
-      <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span id="navbar">TWEETER</span>
-      <div>
-        <a> Write a new tweet</a>
-        <i class="fas fa-angle-double-down"></i>
-        </div>
-    </nav>
-    <header>
-      <div class = 'navimg'>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Tarin Kazi</h2>
-      </div>
-  </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-<!--error-->
-
-<div id='error-alert' class='error-alert1'>
-  <p class='error'>Tweet can't be blank!</p>
-</div>
-<div id='error-alert' class='error-alert2'>
-  <p class='error'>Tweet too long!</p>
-</div>
-
-      
-      <form action="/tweets" method="POST" id="post_tweet">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        
+      <!-- Top nav bar (fixed) -->
+      <nav>
+        <span id="navbar">TWEETER</span>
         <div>
-          <button id ="tweetbtn" type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <a> Write a new tweet</a>
+          <i class="fas fa-angle-double-down"></i>
+          </div>
+      </nav>
+      <header>
+        <div class = 'navimg'>
+            <img src="/images/profile-hex.png"> 
         </div>
-      </form>
-      
-    </section>
+        <br>
+        <div>
+            <h2>Tarin Kazi</h2>
+        </div>
+     </header>
 
-    <section id="tweet-history">
-     
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+        
+            <!--error-->
 
-    </section>
+            <div id='error-alert' class='error-alert1'>
+              <p class='error'>Tweet can't be blank!</p>
+            </div>
+            <div id='error-alert' class='error-alert2'>
+              <p class='error'>Tweet too long!</p>
+            </div>
 
-    </main>
+              <!--New Tweet Area-->
+              <form action="/tweets" method="POST" id="post_tweet">
+                <label for="tweet-text">What are you humming about?</label>
+                <textarea name="text" id="tweet-text"></textarea>
+                <div>
+                  <button id ="tweetbtn" type="submit">Tweet</button>
+                  <output name="counter" class="counter" for="tweet-text">140</output>
+                </div>
+              </form>
+          
+        </section>
+
+        <section id="tweet-history"></section>
+
+      </main>
 
   </body>
 </html>

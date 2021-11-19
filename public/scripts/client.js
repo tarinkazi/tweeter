@@ -3,55 +3,18 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
 
-
-// const tweetData = {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//   "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//   "created_at": 1461116232227
-// }
-
+//for checking html unknown char
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-// const safeHTML = `<p>${escape(textFromUser)}</p>`;
 
 
 
+//display code
 function renderTweets(tweets) {
-  
   $('#tweet-history').empty();
   document.getElementById("tweet-text").value = "";
  
@@ -64,9 +27,8 @@ function renderTweets(tweets) {
   }
  
 }
-// Test / driver code (temporary)
 
-
+//Html structure
 const createTweetElement = function(data) {
   const {user, content, created_at} = data;
   const tweetElementHTML = $(`<article class="tweet">
@@ -98,7 +60,7 @@ const createTweetElement = function(data) {
 
 }
 
-
+//JS logic
 $(document).ready(function () {
   $(".error-alert1").hide();
   $(".error-alert2").hide();
@@ -118,38 +80,35 @@ $(document).ready(function () {
     evt.preventDefault();
     
  
-;
-
     $(".error-alert1").hide();
     $(".error-alert2").hide();
   
-       //console.log(evt.target.tweet.value)
-      const $data = $(this).serialize();
-      const $val = $('#tweet-text').val();
+       
+    const $data = $(this).serialize();
+    const $val = $('#tweet-text').val();
      
       if ($val.length > 140) {
         document.getElementById("tweet-text").value = "";
-       return $(".error-alert2").slideDown();
-        //return  $(".error-alert2").hide();
+        $(this).find('.counter').text(140);
+        return $(".error-alert2").slideDown();
+       
       } 
-      console.log("======>",$val);
+      
       if ($val.length === 0) {
         document.getElementById("tweet-text").value = "";
         return $(".error-alert1").slideDown();
-         //return $(".error-alert1").hide();
+         
       }
-      //
+      
       $.ajax({
-
-
         type: "POST",
         url: "/tweets",
         data: $data
       }).then((res) => {
         loadTweets();
       })
-    
-  })
+      $(this).find('.counter').text(140);
+  });
 
 
 

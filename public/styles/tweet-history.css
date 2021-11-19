@@ -11,9 +11,7 @@ align-self: flex-start;
 
 .tweet {
   height: 300px;
-  /* width: max-content; */
   width: 100%;
-  
   margin: 1em;
   border: 2px solid  #545149; 
 }
@@ -52,7 +50,7 @@ align-self: flex-start;
 }
 
 .display-tweet {
-  margin: 0.5rem; 
+  
   border-style: hidden; 
   border-bottom: 5px solid #545149;
   font-weight: 300;
@@ -69,7 +67,6 @@ align-self: flex-start;
 .icons {
   display: flex;
   align-items: center;
-  /*justify-content: space-between;*/
   color: blue;
   flex-direction: row-reverse;
   margin-right: 15px;
@@ -97,6 +94,7 @@ align-self: flex-start;
  
  width: 55%;
  float: right;
- align-self: flex-end;
+ align-self: flex-end; 
+
  }
 }
