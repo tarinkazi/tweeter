@@ -73,3 +73,22 @@ align-self: flex-start;
   color:burlywood;
 
 }
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+	#tweet-history {
+
+	width: 95%;
+	}
+}
+
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  #tweet-history{
+ 
+ width: 55%;
+ float: right;
+ align-self: flex-end;
+ }
+}

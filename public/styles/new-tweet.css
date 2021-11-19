@@ -41,3 +41,23 @@ button {
 .red {
 	color: red;
 }
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+	.new-tweet {
+
+	width: 95%;
+	}
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+	.new-tweet {
+	
+	width: 55%;
+	float: right;
+	align-self: flex-end;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	}
+}
