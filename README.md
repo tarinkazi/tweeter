@@ -4,11 +4,11 @@ Tweeter! A single-page Twitter clone styled with Flexbox to make it pop with a s
 
 Tweeter uses jQuery and Ajax to make requests and communicate with the backend server.
 
-Screenshot
+##Screenshot
 
-https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/desktop-pic.png
-https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/empty-err-msg.png
-https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/tab-pic.png
+[desktopVersion](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/desktop-pic.png)
+[empty-err-msg](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/empty-err-msg.png)
+[tab-version](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/tab-pic.png)
 
 ## Getting Started
 
