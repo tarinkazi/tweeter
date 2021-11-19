@@ -6,9 +6,9 @@ Tweeter uses jQuery and Ajax to make requests and communicate with the backend s
 
 ##Screenshot
 
-[desktopVersion](docs/desktop-pic.png)
-[empty-err-msg](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/empty-err-msg.png)
-[tab-version](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/tab-pic.png)
+!['desktopVersion'](https://github.com/tarinkazi/tweeter/blob/852b81943c6d6a26760c6407f659a94d64764249/docs/desktop-pic.png)
+!['empty-err-msg'](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/empty-err-msg.png)
+!['tab-version'](https://github.com/tarinkazi/tweeter/blob/0fcff56ae4d2d63c880660e467f5bd7bf7eb893e/docs/tab-pic.png)
 
 ## Getting Started
 
