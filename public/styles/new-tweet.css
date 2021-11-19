@@ -32,6 +32,12 @@ button {
 	color: #fff;
 	font-family: "Bungee", sans-serif;
   margin: inline start 10px;
+	padding-bottom: 15px;
+	width: 120px;
+	padding-top: 11px;
+}
+p.error {
+	color: red;
 }
 
 
